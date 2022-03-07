@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>290</x>
+      <y>240</y>
+      <w>320</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+- comprasCliente: ArrayList&lt;Compra&gt;
+- aplicacoesNaoAvaliadas: ArrayList&lt;Aplicacao&gt;
+- aplicacoesAvaliadas: ArrayList&lt;Aplicacao&gt;
+--
++ Comprar(Compra): void
++ Avaliar(int,int): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>240</y>
+      <w>300</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Programador
+--
+
+- aplicacoesProgramador: ArrayList&lt;Aplicacao&gt;
+- avaliacao: double
+--
++ criarAplicacao(Aplicacao): void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>0</y>
+      <w>290</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Utlilizador
+--
+# nome: String
+# idade: int
+# numUtilizador: int
+# counter: int
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>460</y>
+      <w>300</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Compra
+--
+- data: LocalDate
+- preco: double
+- cliente: Cliente
+- aplicacoes: ArrayList&lt;Aplicacao&gt;
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>690</y>
+      <w>300</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>TipoAplicacao
+--
+ENUM
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>690</y>
+      <w>290</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Avaliacao
+--
+- data: LocalDate
+- numUtilizadorCliente: int
+- idAplicacao: int
+- Comentario: String
+--
++ atualizarAvaliacaoProgramador(): int
++ atualizarAvaliacaoAplicacao(): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>290</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>AppStore
+--
+- id: int
+- counter: int
+- programadores: ArrayList&lt;Programador&gt;
+- aplicacoes: ArrayList&lt;Aplicacoes&gt;
+- clientes: ArrayList&lt;Cliente&gt;
+- compras: ArrayList&lt;Compra&gt;
+--
++ criarProgramador(): void
++ criarCliente(): void
++ criarCompra(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>170</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>170</y>
+      <w>70</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>460</y>
+      <w>330</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Aplicacao
+--
+- nome: String
+- preco: double
+- avaliacoes: List&lt;Avaliacao&gt;
+- avaliacao: double
+- id: int
+- counter: int
+- programador: Programador
+- tipo: TipoAplicacao
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
