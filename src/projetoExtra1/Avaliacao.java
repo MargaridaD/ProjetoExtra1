@@ -5,24 +5,30 @@ import java.time.LocalDate;
 public class Avaliacao {
 	
 	//Atributos
-	private LocalDate data= LocalDate.now();
+	private LocalDate data;
 	private int numUtilizadorCliente;
 	private int idAplicacao;
 	private String comentario;
+	private int valor;
 	
 	//Construtor
-	public Avaliacao(int aNumUtilizadorCliente, int aIdAplicacao) {
+	public Avaliacao(int aNumUtilizadorCliente, int aIdAplicacao, int aValor) {
 		numUtilizadorCliente = aNumUtilizadorCliente;
 		idAplicacao = aIdAplicacao;
+		valor = aValor;
+		data = LocalDate.now();
 		}
 	
 	//Métodos
-	public void atualizarAvProgramador() {
-		
-	}
 	
-	public void atualizarAvAplicacao() {
-		
+	
+	//Getters e Setters	
+	public int getValor() {
+		return valor;
+	}
+
+	public void setValor(int valor) {
+		this.valor = valor;
 	}
 	
 

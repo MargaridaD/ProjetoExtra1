@@ -26,23 +26,36 @@ public class Cliente extends Utilizador {
 	public void comprar(Compra aCompra) {  /*adiciona compras ao ArrayList com compras do cliente e atualiza
 											lista das aplicações do utilizador*/
 		compras.add(aCompra);
-		for (Aplicacao i: aCompra.getAplicacoes()) {
-			
+			for (Aplicacao i: aCompra.getAplicacoes()) {
+				aplicacoesAvaliadas.add(i);		
+			}	
+		}
+	
+	public boolean podeAvaliar(Aplicacao aAplicacao) {
+		boolean aplicacaoCompradaENaoAvaliada = false;
+		for(Aplicacao i:aplicacoesNaoAvaliadas) {
+			if(i.getId()==aAplicacao) {
+				aplicacaoCompradaENaoAvaliada = true;
+	}
+
+		
+	public void avaliar(Aplicacao aAplicacao, int aValor, String aComentario) {   /* Verificar se utilizador tem aplicação
+												Verificar se utilizador já avaliou aplicação
+												Guardar avaliação
+												Guardar comentário
+												Forçar avaliação aplicação
+												Forçar avaliacao do programador*/
 		
 			
 			
 		}
+	
 
 			
 		}
-		
-		
-	public void avaliar(int aIdAplicacao, int aNumUtilizador) {   /* Verificar se utilizador tem aplicação
-																	Verificar se utilizador já avaliou aplicação
-																	Guardar avaliação
-																	Guardar comentário
-																	Forçar avaliação aplicação
-																	Forçar avaliacao do programador*/
+	
 }
 
+
+	
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>290</x>
-      <y>240</y>
-      <w>320</w>
-      <h>180</h>
+      <x>261</x>
+      <y>216</y>
+      <w>288</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Cliente
 --
@@ -23,14 +23,13 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>240</y>
-      <w>300</w>
-      <h>180</h>
+      <x>558</x>
+      <y>216</y>
+      <w>270</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Programador
 --
-
 - aplicacoesProgramador: ArrayList&lt;Aplicacao&gt;
 - avaliacao: double
 --
@@ -44,10 +43,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
+      <x>423</x>
       <y>0</y>
-      <w>290</w>
-      <h>180</h>
+      <w>261</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Utlilizador
 --
@@ -63,10 +62,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>620</x>
-      <y>460</y>
-      <w>300</w>
-      <h>180</h>
+      <x>558</x>
+      <y>414</y>
+      <w>270</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Compra
 --
@@ -82,10 +81,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>50</x>
-      <y>690</y>
-      <w>300</w>
-      <h>180</h>
+      <x>45</x>
+      <y>621</y>
+      <w>270</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>TipoAplicacao
 --
@@ -98,10 +97,10 @@ ENUM
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>690</y>
-      <w>290</w>
-      <h>180</h>
+      <x>396</x>
+      <y>621</y>
+      <w>234</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>Avaliacao
 --
@@ -109,9 +108,9 @@ ENUM
 - numUtilizadorCliente: int
 - idAplicacao: int
 - Comentario: String
+- valor: int
 --
-+ atualizarAvaliacaoProgramador(): int
-+ atualizarAvaliacaoAplicacao(): int
+
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -120,19 +119,18 @@ ENUM
     <coordinates>
       <x>0</x>
       <y>0</y>
-      <w>290</w>
-      <h>170</h>
+      <w>261</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>AppStore
 --
-- id: int
-- counter: int
 - programadores: ArrayList&lt;Programador&gt;
 - aplicacoes: ArrayList&lt;Aplicacoes&gt;
 - clientes: ArrayList&lt;Cliente&gt;
 - compras: ArrayList&lt;Compra&gt;
 --
 + criarProgramador(): void
++ criarAplicacao(): void
 + criarCliente(): void
 + criarCompra(): void</panel_attributes>
     <additional_attributes/>
@@ -140,10 +138,10 @@ ENUM
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>490</x>
-      <y>170</y>
-      <w>70</w>
-      <h>90</h>
+      <x>441</x>
+      <y>153</y>
+      <w>63</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>50.0;10.0;10.0;70.0</additional_attributes>
@@ -151,10 +149,10 @@ ENUM
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>170</y>
-      <w>70</w>
-      <h>90</h>
+      <x>630</x>
+      <y>153</y>
+      <w>63</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;70.0</additional_attributes>
@@ -162,9 +160,9 @@ ENUM
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>270</x>
-      <y>460</y>
-      <w>330</w>
+      <x>243</x>
+      <y>414</y>
+      <w>297</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>Aplicacao
@@ -178,7 +176,8 @@ ENUM
 - programador: Programador
 - tipo: TipoAplicacao
 --
-
++ criaAvaliacao()
++ calcularAvaliacaoMedia(): int
 </panel_attributes>
     <additional_attributes/>
   </element>

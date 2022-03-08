@@ -10,33 +10,34 @@ public class AppStore {
 	
 	
 	//Atributos
-	private int id;
-	private static int counter = 0;
-	private List<Programador> programadores;
-	private List<Aplicacao> aplicacoes;
-	private List<Cliente> clientes;
-	private List<Compra> compras;
+	private ArrayList<Programador> programadores;
+	private ArrayList<Aplicacao> aplicacoes;
+	private ArrayList<Cliente> clientes;
+	private ArrayList<Compra> compras;
 	
+
 	//Construtor	
 	public AppStore() {
-		id = counter;
-		programadores = new ArrayList <Programador>();
-		clientes = new ArrayList <Cliente>();
-		compras = new ArrayList <Compra>();
-		counter++;
+		programadores = new ArrayList<Programador>();
+		aplicacoes = new ArrayList<Aplicacao>();
+		clientes = new ArrayList<Cliente>();
+		compras = new ArrayList<Compra>();
 	}
 	
 	//Metodos
-
-	private void criarProgramador() {
-		
+	public void criarProgramador(Programador aProgramador) {
+		programadores.add(aProgramador);
 	}
 	
-	private void criarCliente() {
-		
+	public void criarAplicacao(Aplicacao aAplicacao) {
+		aplicacoes.add(aAplicacao);
 	}
 	
-	private void criarCompra() {
-		
+	public void criarCliente(Cliente aClientes) {
+		clientes.add(aClientes);
+			}
+	
+	public  void criarCompra(Compra aCompra) {
+		compras.add(aCompra);
 	}
 }
