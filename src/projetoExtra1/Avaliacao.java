@@ -2,19 +2,21 @@ package projetoExtra1;
 
 import java.time.LocalDate;
 
+import projetoExtra1.utilizador.Cliente;
+
 public class Avaliacao {
 	
 	//Atributos
 	private LocalDate data;
-	private int numUtilizadorCliente;
-	private int idAplicacao;
+	private Cliente cliente;
+	private Aplicacao aplicacao;
 	private String comentario;
 	private int valor;
 	
 	//Construtor
-	public Avaliacao(int aNumUtilizadorCliente, int aIdAplicacao, int aValor) {
-		numUtilizadorCliente = aNumUtilizadorCliente;
-		idAplicacao = aIdAplicacao;
+	public Avaliacao(Cliente aCliente, Aplicacao aAplicacao, int aValor) {
+		cliente = aCliente;
+		aplicacao = aAplicacao;
 		valor = aValor;
 		data = LocalDate.now();
 		}

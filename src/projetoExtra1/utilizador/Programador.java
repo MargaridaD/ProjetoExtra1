@@ -1,34 +1,34 @@
 package projetoExtra1.utilizador;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import projetoExtra1.Aplicacao;
-import projetoExtra1.Compra;
 
 public class Programador extends Utilizador{
 	
 	//Atributos
-	private ArrayList<Aplicacao> aplicacoesProgramador;
+	private ArrayList<Aplicacao> aplicacoes;
 	private double avaliacao;
-	
+
 	
 	//Construtor
 	public Programador(String aNome, int aIdade) {
 		super(aNome, aIdade);
-		aplicacoesProgramador = new ArrayList<Aplicacao>();
+		aplicacoes = new ArrayList<Aplicacao>();
 	}
 	
 	//Métodos
 	public void criarAplicacao(Aplicacao aAplicacao) { 
-		aplicacoesProgramador.add(aAplicacao);
+		aplicacoes.add(aAplicacao);
 		
 	}
 	
 	public void calcularAvaliacaoMedia() {
-		
+		int sum = 0;
+		for(Aplicacao i: aplicacoes) {
+			sum += i.getAvaliacao();
+		}
+			avaliacao = sum / aplicacoes.size();	
 	}
-	
-	
-
+	 //Getters e Setters
 }

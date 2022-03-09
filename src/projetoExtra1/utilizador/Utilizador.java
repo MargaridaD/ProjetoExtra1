@@ -38,6 +38,10 @@ public abstract class Utilizador {
 		return numUtilizador;
 	}
 
+	public String toString() {
+		return "Nome:" + nome + "; idade:" + idade + "; Número de Utilizador: " + numUtilizador;
+	}
+
 	 
 
 	

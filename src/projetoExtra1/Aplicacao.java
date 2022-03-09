@@ -14,6 +14,7 @@ public class Aplicacao {
 	private static int counter = 0;
 	private Programador programador;
 	private TipoAplicacao tipo;
+	private int numeroVendas;
 	
 	//Construtor
 	public Aplicacao(String nome, double preco,
@@ -25,6 +26,7 @@ public class Aplicacao {
 		this.programador = programador;
 		this.tipo = tipo;
 		avaliacoes = new ArrayList<Avaliacao>();
+		numeroVendas = 0;
 	}
 	
 	//Métodos
@@ -39,8 +41,10 @@ public class Aplicacao {
 		for (Avaliacao i: avaliacoes) {
 			sum += i.getValor();
 		}
-		media = sum / avaliacoes.size();
+		avaliacao = sum / avaliacoes.size();
 	}
+	
+	//
 
 	//Getters e Setters
 	public int getId() {
@@ -70,17 +74,22 @@ public class Aplicacao {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
 
+	public double getAvaliacao() {
+		return avaliacao;
+	}
 
+	public void setAvaliacao(double avaliacao) {
+		this.avaliacao = avaliacao;
+	}
 
+	public int getNumeroVendas() {
+		return numeroVendas;
+	}
 
-	
-
-
-
-	
-	
+	public void setNumeroVendas(int numeroVendas) {
+		this.numeroVendas = numeroVendas;
+	}
+		
 
 }
