@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import projetoExtra1.Aplicacao;
+import projetoExtra1.Avaliacao;
 import projetoExtra1.Compra;
 
 public class Cliente extends Utilizador {
@@ -23,39 +24,42 @@ public class Cliente extends Utilizador {
 	}
 	
 	//Métodos
-	public void comprar(Compra aCompra) {  /*adiciona compras ao ArrayList com compras do cliente e atualiza
-											lista das aplicações do utilizador*/
-		compras.add(aCompra);
-			for (Aplicacao i: aCompra.getAplicacoes()) {
-				aplicacoesAvaliadas.add(i);		
-			}	
-		}
 	
-	public boolean podeAvaliar(Aplicacao aAplicacao) {
-		boolean aplicacaoCompradaENaoAvaliada = false;
-		for(Aplicacao i:aplicacoesNaoAvaliadas) {
-			if(i.getId()==aAplicacao) {
-				aplicacaoCompradaENaoAvaliada = true;
+	//Verificar se utilizador tem aplicação
+	public boolean comprouAplicacao(Aplicacao aAplicacao) {
+		if(aplicacoesNaoAvaliadas.contains(aAplicacao)||aplicacoesAvaliadas.contains(aAplicacao)) {
+			return true;
+		}else {
+			return false;	
+		}
+	}
+	
+	//Adicionar compra ao ArrayList compras e atualizar lista das aplicações do utilizador
+	public void comprar(Compra aCompra) {  
+		compras.add(aCompra);
+		for (Aplicacao i: aCompra.getAplicacoes()) {
+			if(!comprouAplicacao(i)) {
+			aplicacoesNaoAvaliadas.add(i);
+			}
+		}	
+	}
+	
+
+	//Verificar se utilizador ainda não avaliou 
+	//Fazer avaliação / atualizar listas aplicacoesNaoAvaliadas e aplicacoesAvaliadas do cliente / adicionar avaliacao à lista avaliacoes da aplicacao
+	public boolean avaliouAplicacao(Aplicacao aAplicacao) {
+		if(aplicacoesAvaliadas.contains(aAplicacao)) {
+			return true;
+		}else {
+			return false;	
+		}
 	}
 
-		
-	public void avaliar(Aplicacao aAplicacao, int aValor, String aComentario) {   /* Verificar se utilizador tem aplicação
-												Verificar se utilizador já avaliou aplicação
-												Guardar avaliação
-												Guardar comentário
-												Forçar avaliação aplicação
-												Forçar avaliacao do programador*/
-		
-			
-			
-		}
-	
-
-			
-		}
-	
-}
-
-
+	public void avaliar(Aplicacao aAplicacao, int aValor, String aComentario) { 
+			Avaliacao avaliacao = new Avaliacao(3,2,5);
+			aplicacoesNaoAvaliadas.remove(aAplicacao);
+			aplicacoesAvaliadas.add(aAplicacao);
+			aAplicacao.getAvaliacoes().add(avaliacao);
+	}
 	
 }

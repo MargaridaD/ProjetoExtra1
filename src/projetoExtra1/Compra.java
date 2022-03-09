@@ -2,9 +2,9 @@ package projetoExtra1;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 import projetoExtra1.utilizador.Cliente;
+
 
 
 public class Compra {
@@ -20,6 +20,7 @@ public class Compra {
 	public Compra(Cliente aCliente, Cesto aCesto) {
 		data = LocalDate.now();
 		preco = aCesto.getPreco();
+		cliente = aCliente;
 		aplicacoes = aCesto.getAplicacoes();
 	}
 
