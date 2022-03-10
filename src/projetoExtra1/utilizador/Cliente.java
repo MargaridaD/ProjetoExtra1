@@ -1,7 +1,6 @@
 package projetoExtra1.utilizador;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import projetoExtra1.Aplicacao;
 import projetoExtra1.Avaliacao;
@@ -11,9 +10,9 @@ import projetoExtra1.Compra;
 public class Cliente extends Utilizador {
 
 	//Atributos
-	private List<Compra> compras;   //ArrayList com compras do cliente
-	private List<Aplicacao> aplicacoesNaoAvaliadas; //ArrayList as aplicações do cliente
-	private List<Aplicacao> aplicacoesAvaliadas; //ArrayList as aplicações do cliente
+	private ArrayList<Compra> compras;   //ArrayList com compras do cliente
+	private ArrayList<Aplicacao> aplicacoesNaoAvaliadas; //ArrayList as aplicações do cliente
+	private ArrayList<Aplicacao> aplicacoesAvaliadas; //ArrayList as aplicações do cliente
 	
 	
 	//Construtor
@@ -35,19 +34,13 @@ public class Cliente extends Utilizador {
 		}
 	}
 	
-	//Gerar compra / adicionar compra ao ArrayList compras do cliente / atualizar lista das aplicações do cliente / atualizar número de vendas de cada aplicação / atualizar ArrayList vendas da appStore
-	public void comprar(Cesto aCesto) {
-		Compra compra = new Compra(this, aCesto);
-		compras.add(compra);
-		for (Aplicacao i: compra.getAplicacoes()) {
+	//Adicionar compra ao ArrayList compras do cliente / atualizar lista das aplicações do cliente 
+	public void adicionarCompra(Compra aCompra) {
+		compras.add(aCompra);
+		for (Aplicacao i: aCompra.getAplicacoes()) {
 			if(!comprouAplicacao(i)) {
 			aplicacoesNaoAvaliadas.add(i);
 			}
-		}
-		for (Aplicacao i: compra.getAplicacoes()) {
-			int numeroVendas = i.getNumeroVendas();
-			numeroVendas += 1;
-			i.setNumeroVendas(numeroVendas);
 		}
 	}
 		
@@ -70,6 +63,8 @@ public class Cliente extends Utilizador {
 			aplicacoesAvaliadas.add(aAplicacao);
 			aAplicacao.getAvaliacoes().add(avaliacao);
 	}
+
+	
 	//Getters e Setters
 	
 }

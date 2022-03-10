@@ -9,39 +9,35 @@ public class Aplicacao {
 	private String nome;
 	private double preco;
 	private ArrayList<Avaliacao> avaliacoes;
-	private double avaliacao;
 	private int id;
 	private static int counter = 0;
 	private Programador programador;
 	private TipoAplicacao tipo;
-	private int numeroVendas;
+	private int unidadesVendidas;
 	
 	//Construtor
-	public Aplicacao(String nome, double preco,
-			Programador programador, TipoAplicacao tipo) {
-		this.nome = nome;
-		this.preco = preco;
-		this.id = counter;
+	public Aplicacao(String aNome, double aPreco,
+			Programador aProgramador, TipoAplicacao aTipo) {
+		nome = aNome;
+		preco = aPreco;
+		id = counter;
 		counter++;
-		this.programador = programador;
-		this.tipo = tipo;
+		programador = aProgramador;
+		tipo = aTipo;
 		avaliacoes = new ArrayList<Avaliacao>();
-		numeroVendas = 0;
+		unidadesVendidas = 0;
 	}
 	
 	//Métodos
-	
-	public void criarAvaliacao(Avaliacao aAvaliacao) {
-		avaliacoes.add(aAvaliacao);
-	}
 
-	public void calcularAvaliacaoMedia() {
+	
+	public double calcularAvaliacaoMedia() {
 		int sum = 0;
-		double media;
+
 		for (Avaliacao i: avaliacoes) {
 			sum += i.getValor();
 		}
-		avaliacao = sum / avaliacoes.size();
+		return sum / avaliacoes.size();
 	}
 	
 	//
@@ -75,21 +71,23 @@ public class Aplicacao {
 		this.nome = nome;
 	}
 
-	public double getAvaliacao() {
-		return avaliacao;
+
+	public int getUnidadesVendidas() {
+		return unidadesVendidas;
 	}
 
-	public void setAvaliacao(double avaliacao) {
-		this.avaliacao = avaliacao;
+	public void setUnidadesVendidas(int unidadesVendidas) {
+		this.unidadesVendidas = unidadesVendidas;
 	}
 
-	public int getNumeroVendas() {
-		return numeroVendas;
+	public Programador getProgramador() {
+		return programador;
 	}
 
-	public void setNumeroVendas(int numeroVendas) {
-		this.numeroVendas = numeroVendas;
+	public void setProgramador(Programador programador) {
+		this.programador = programador;
 	}
+	
 		
 
 }
