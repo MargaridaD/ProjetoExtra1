@@ -87,6 +87,16 @@ public class Aplicacao {
 	public void setProgramador(Programador programador) {
 		this.programador = programador;
 	}
+
+	public TipoAplicacao getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoAplicacao tipo) {
+		this.tipo = tipo;
+	}
+
+
 	
 		
 

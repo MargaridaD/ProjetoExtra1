@@ -38,6 +38,6 @@ public class Programador extends Utilizador{
 		}
 		System.out.println("\nProgramador " + nome + ": " + valorTotal + "€.");
 	}
-
 	 //Getters e Setters
+	
 }

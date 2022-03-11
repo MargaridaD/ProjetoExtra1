@@ -12,6 +12,8 @@ public class Compra {
 	//Atributos
 	private LocalDate data;
 	private double preco;
+	private int id;
+	private static int counter = 0;
 	private Cliente cliente;
 	private ArrayList<Aplicacao> aplicacoes;
 	 
@@ -22,6 +24,8 @@ public class Compra {
 		preco = aCesto.getPreco();
 		cliente = aCliente;
 		aplicacoes = aCesto.getAplicacoes();
+		id = counter;
+		counter++;
 	}
 
 
@@ -65,7 +69,17 @@ public class Compra {
 
 	public void setAplicacoes(ArrayList<Aplicacao> aplicacoes) {
 		this.aplicacoes = aplicacoes;
-	}	
+	}
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+	
 
 
 
