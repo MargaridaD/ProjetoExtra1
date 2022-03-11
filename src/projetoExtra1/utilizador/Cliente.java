@@ -45,8 +45,6 @@ public class Cliente extends Utilizador {
 	}
 		
 		
-	
-
 	//Verificar se utilizador ainda não avaliou 
 	//Fazer avaliação / atualizar listas aplicacoesNaoAvaliadas e aplicacoesAvaliadas do cliente / adicionar avaliacao à lista avaliacoes da aplicacao
 	public boolean avaliouAplicacao(Aplicacao aAplicacao) {
@@ -57,12 +55,13 @@ public class Cliente extends Utilizador {
 		}
 	}
 
-	public void avaliar(Aplicacao aAplicacao, int aValor, String aComentario) { 
+	public void avaliar(Aplicacao aAplicacao, int aValor, String aComentario) {	
 			Avaliacao avaliacao = new Avaliacao(this,aAplicacao,aValor);
 			aplicacoesNaoAvaliadas.remove(aAplicacao);
 			aplicacoesAvaliadas.add(aAplicacao);
 			aAplicacao.getAvaliacoes().add(avaliacao);
 	}
+	
 
 	
 	//Getters e Setters

@@ -13,8 +13,7 @@ public class Main {
 	AppStore appStore1 = new AppStore();
 		
 	
-	
-	//Instanciar 1º cesto de compras
+	//Instanciar 1ï¿½ cesto de compras
 	Cesto cesto1 = new Cesto();
 	
 	//Encher cesto
@@ -25,19 +24,19 @@ public class Main {
 	//Gerar compra 
 	Compra compra1 = new Compra(cliente1, cesto1);
 	
-	// adicionar compra a lista compras da AsppStore / adicionar compra a listas compras  e aplicaçõesNaoAvaliadas do cliente / Atualizar nº de vendas de cada aplicacao
+	// adicionar compra a lista compras da AsppStore / adicionar compra a listas compras  e aplicaï¿½ï¿½esNaoAvaliadas do cliente / Atualizar nï¿½ de vendas de cada aplicacao
 	appStore1.adicionarCompra(compra1);
 	
 	//Avaliar Aplicacao
-	System.out.println(cliente2.getNome() +" comprou aplicação " + aplicacao2.getNome() +": " + cliente2.comprouAplicacao(aplicacao2));
-	System.out.println(cliente2.getNome() +" avaliou aplicação " + aplicacao2.getNome() +": " + cliente2.avaliouAplicacao(aplicacao2));	
+	System.out.println(cliente2.getNome() +" comprou aplicaï¿½ï¿½o " + aplicacao2.getNome() +": " + cliente2.comprouAplicacao(aplicacao2));
+	System.out.println(cliente2.getNome() +" avaliou aplicaï¿½ï¿½o " + aplicacao2.getNome() +": " + cliente2.avaliouAplicacao(aplicacao2));	
 	
-	cliente2.avaliar(aplicacao2, 3, "Razoável!");
+	cliente2.avaliar(aplicacao2, 3, "Razoï¿½vel!");
 	
-	//Obter avaliação de aplicação
-	System.out.println("Avaliação da aplicação " + aplicacao2.getNome() + ": " + aplicacao2.calcularAvaliacaoMedia());
+	//Obter avaliaï¿½ï¿½o de aplicaï¿½ï¿½o
+	System.out.println("Avaliaï¿½ï¿½o da aplicaï¿½ï¿½o " + aplicacao2.getNome() + ": " + aplicacao2.calcularAvaliacaoMedia());
 	
-	//Obter avaliação de programador
+	//Obter avaliaï¿½ï¿½o de programador
 
 
 	System.out.println(appStore1.listarUtilizadores());
